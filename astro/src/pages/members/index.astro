@@ -1,0 +1,13 @@
+---
+export const prerender = false;
+import { SignedIn, SignedOut } from "@clerk/astro/components";
+---
+
+<SignedIn>
+  <h1>Members</h1>
+  <p>会員ページです</p>
+</SignedIn>
+
+<SignedOut>
+  <p>未ログインです。<a href="/sign-in">ログイン</a>してください。</p>
+</SignedOut>

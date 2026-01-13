@@ -1,16 +1,27 @@
 ---
-
+import { SignedIn, SignedOut } from "@clerk/astro/components";
+import { UserButton } from "@clerk/astro/react";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <h1>Home</h1>
+
+    <SignedIn>
+      <p>ログイン中</p>
+      <UserButton client:load />
+    </SignedIn>
+
+    <SignedOut>
+      <p>未ログイン</p>
+      <a href="/sign-in">ログイン</a>
+    </SignedOut>
+  </body>
 </html>
