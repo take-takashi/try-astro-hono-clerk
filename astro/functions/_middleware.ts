@@ -54,6 +54,7 @@ export const onRequest = handleMiddleware<Env>(async (c, next) => {
   }
 
   try {
+    // 本番環境でverifyTokenにauthorizedPartiesを設定する
     await verifyToken(session, { jwtKey: pagesEnv.CLERK_JWT_KEY });
   } catch {
     return Response.redirect(new URL("/sign-in", c.req.url), 302);
