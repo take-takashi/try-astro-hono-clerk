@@ -1,13 +1,16 @@
 ---
 export const prerender = false;
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import { SignedIn, SignedOut } from "@clerk/astro/components";
 ---
 
-<SignedIn>
-  <h1>Members</h1>
-  <p>会員ページです</p>
-</SignedIn>
+<BaseLayout title="Members">
+  <SignedIn>
+    <h1>Members</h1>
+    <p>会員ページです</p>
+  </SignedIn>
 
-<SignedOut>
-  <p>未ログインです。<a href="/sign-in">ログイン</a>してください。</p>
-</SignedOut>
+  <SignedOut>
+    <p>未ログインです。<a href="/sign-in">ログイン</a>してください。</p>
+  </SignedOut>
+</BaseLayout>
