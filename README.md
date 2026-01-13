@@ -18,4 +18,6 @@ node = "24.8.0"
 # 以下のコマンドが良さそう
 % npm create astro@latest astro -- --template minimal --install --no-git --yes
 
+# clerkをインストール
+% npm install @clerk/astro
 ```
