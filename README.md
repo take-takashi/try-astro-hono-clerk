@@ -1,6 +1,6 @@
 # try-astro-hono-clerk
 
-Astro, Hono, Clerkを使ってみる試み
+Astro, Hono, Clerk を使ってみる試み
 
 # setup command
 
@@ -20,4 +20,12 @@ node = "24.8.0"
 
 # clerkをインストール
 % npm install @clerk/astro
+```
+
+# astro setup
+
+```bash
+% cd astro/
+
+% npx astro add react
 ```
