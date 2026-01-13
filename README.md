@@ -28,4 +28,10 @@ node = "24.8.0"
 % cd astro/
 
 % npx astro add react
+
+# Astro を Cloudflare Pages（directory mode）にするため？（要確認）
+% npm i -D @astrojs/cloudflare
+
+#
+% npm i hono @clerk/backend
 ```
