@@ -4,10 +4,19 @@ import cloudflare from "@astrojs/cloudflare";
 import clerk from "@clerk/astro";
 import react from "@astrojs/react";
 
+import tailwindcss from "@tailwindcss/vite";
+
 // https://astro.build/config
 export default defineConfig({
-  output: "static", // SSRのページは export const prerender = false を指定する
+  // SSRのページは export const prerender = false を指定する
+  output: "static",
+
   adapter: cloudflare(),
+
   // Can accept options, such as { signInForceRedirectUrl: '/dashboard' }
   integrations: [clerk(), react()],
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

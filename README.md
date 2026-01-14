@@ -34,4 +34,7 @@ node = "24.8.0"
 
 #
 % npm i hono @clerk/backend
+
+# install tailwind css
+% npx astro add tailwind
 ```
