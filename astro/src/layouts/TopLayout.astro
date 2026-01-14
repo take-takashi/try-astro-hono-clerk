@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+import BaseLayout from "./BaseLayout.astro";
+const { title = "member-site" } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex items-center justify-between">
+        {/* Left: Logo + Navigation Links */}
+        <div class="flex items-center gap-8">
+          <button class="flex items-center gap-2 shrink-0">
+            <span class="text-green-600">PlantCare Pro</span>
+          </button>
+          {/* Nav */}
+          <nav class="hidden md:flex items-center gap-6">
+            <button class="hover:text-green-600 transition-colors">
+              <span>フォーラムについて</span>
+            </button>
+            <button class="hover:text-green-600 transition-colors">
+              <span>お問い合わせ</span>
+            </button>
+            <button class="hover:text-green-600 transition-colors">
+              <span>記事一覧</span>
+            </button>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <slot />
+</BaseLayout>
